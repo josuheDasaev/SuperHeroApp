@@ -9,4 +9,5 @@
     <string name="no_description">Sin descrippcion agregada.</string>
 
     <string name="Dark_mode_key">DARK_MODE_KEY</string>
+    <string name="search_heroes">Buscar super heroe</string>
 </resources>
