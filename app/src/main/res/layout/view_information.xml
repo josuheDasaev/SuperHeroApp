@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_info"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/imHero"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txNameHero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/loading"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imHero" />
+
+    <TextView
+        android:id="@+id/txIdHero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/loading"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txNameHero" />
+
+    <TextView
+        android:id="@+id/txDescriptionHero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txIdHero" />
+
+    <TextView
+        android:id="@+id/txUpdateHero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/loading"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txDescriptionHero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SuperHeroApp</string>
+    <string name="loading">loading..</string>
+    <string name="description">Description</string>
+
+    <string name="id">Id: %1$s</string>
+    <string name="update">Actualización: %1$s</string>
+    <string name="descriptionHero">Descripción: %1$s</string>
+    <string name="no_description">Sin descrippcion agregada.</string>
+
+    <string name="Dark_mode_key">DARK_MODE_KEY</string>
+</resources>
