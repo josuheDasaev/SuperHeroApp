@@ -12,6 +12,7 @@ import com.dasaevcompany.superheroapp.R
 import com.dasaevcompany.superheroapp.databinding.FragmentHomeBinding
 import com.dasaevcompany.superheroapp.databinding.ViewInformationBinding
 import com.dasaevcompany.superheroapp.model.Hero
+import com.dasaevcompany.superheroapp.utilities.ConnectivityUtil
 import com.dasaevcompany.superheroapp.view.adapters.HeroAdapter
 import com.dasaevcompany.superheroapp.view.adapters.HeroListener
 import com.dasaevcompany.superheroapp.viewmodel.SuperHeroViewModel
@@ -40,8 +41,11 @@ class HomeFragment : Fragment(), HeroListener {
     }
 
     private fun initData(){
-        service.getSuperHero()
+
         binding.loading.visibility = View.VISIBLE
+        if(internet()){
+            service.getSuperHero()
+        }
     }
 
     private fun observers(){
@@ -90,6 +94,10 @@ class HomeFragment : Fragment(), HeroListener {
         } else {
             bindingInfo.txDescriptionHero.text = getString(R.string.no_description)
         }
+    }
+
+    private fun internet():Boolean{
+        return ConnectivityUtil().internet(requireActivity())
     }
 
 }

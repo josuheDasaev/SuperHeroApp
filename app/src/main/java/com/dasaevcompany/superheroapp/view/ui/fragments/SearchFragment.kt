@@ -12,6 +12,7 @@ import com.dasaevcompany.superheroapp.R
 import com.dasaevcompany.superheroapp.databinding.FragmentSearchBinding
 import com.dasaevcompany.superheroapp.databinding.ViewInformationBinding
 import com.dasaevcompany.superheroapp.model.Hero
+import com.dasaevcompany.superheroapp.utilities.ConnectivityUtil
 import com.dasaevcompany.superheroapp.utilities.VerifyField
 import com.dasaevcompany.superheroapp.utilities.VerifyFieldListener
 import com.dasaevcompany.superheroapp.view.adapters.HeroAdapter
@@ -75,13 +76,19 @@ class SearchFragment : Fragment(),VerifyFieldListener, HeroListener {
 
     }
 
+    private fun internet():Boolean{
+        return ConnectivityUtil().internet(requireActivity())
+    }
+
     override fun verifyField(verify: Boolean) {
         val searchString = binding.etSearch.text.toString()
         val empty = searchString.isNotEmpty()
         binding.ilSearch.isEndIconVisible = empty
         if (empty){
             search = true
-            service.searchSuperHero(searchString)
+            if (internet()){
+                service.searchSuperHero(searchString)
+            }
         } else {
             search = false
             val adapter = HeroAdapter(listOf(), this)

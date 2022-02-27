@@ -10,4 +10,11 @@
 
     <string name="Dark_mode_key">DARK_MODE_KEY</string>
     <string name="search_heroes">Buscar super heroe</string>
+
+    //STRING ALERT NETWORK
+    <string name="alert_network_title">Sin conexión</string>
+    <string name="alert_network_cancel">Cancelar</string>
+    <string name="alert_network_connect">Conectar</string>
+    <string name="alert_network_message">¿Deseas conectarte a un red de internet, para continuar?</string>
+
 </resources>
